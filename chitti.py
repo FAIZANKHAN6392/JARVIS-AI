@@ -32,7 +32,7 @@ def wishMe():
     else:
             speak("Good Evening!")
             
-    speak("I am jarvis. Please tell me how I help You")
+    speak("I am chitti robo sir. Please tell me how I help You")
 
 def takecommand():
         #it takes microphone input from the user and returns string output
@@ -58,8 +58,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('yaman.pli@gmail.com', 'engineerfaizankhan@1')
-    server.sendmail('yaman.pli@gmail.com', to, content)
+    server.login('youremail@gmail.com', 'your-password')
+    server.sendmail('youremail@gmail.com', to, content)
     server.close()
 if __name__== "__main__":
     wishMe()
@@ -99,11 +99,11 @@ if __name__== "__main__":
                     codePath = "C:\\Users\\yaman\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
                     os.startfile(codePath)
                     
-            elif 'email to harry' in query:
+            elif 'email to faizan' in query:
                  try:
                      speak("what should I say?")
                      content = takecommand()
-                     to = "yaman.pli@gmail.com"
+                     to = "youremail@gmail.com"
                      sendEmail(to, content)
                      speak("Email has been sent !")
                  except Exception as e:
